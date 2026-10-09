@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Praguu 💜</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090014;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+
+    background:
+    radial-gradient(circle at 20% 20%, #8b3dba55, transparent 25%),
+    radial-gradient(circle at 80% 80%, #c77dff44, transparent 25%),
+    radial-gradient(circle at 50% 40%, #5a189a33, transparent 35%),
+    linear-gradient(135deg,#08000f,#180027,#08000f);
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-2;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    color:#d8a4ff;
+    pointer-events:none;
+    animation:floatHeart 7s linear forwards;
+    z-index:10;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    min-height:100vh;
+    padding:110px 8%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.small{
+    color:#d8a4ff;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.title{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(55px,9vw,100px);
+    color:#e3b7ff;
+    text-shadow:
+    0 0 15px #c77dff,
+    0 0 40px #9d4edd;
+    margin-bottom:30px;
+}
+
+.subtitle{
+    max-width:750px;
+    line-height:2;
+    color:#ddd0e7;
+    font-size:17px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:40px;
+    padding:16px 35px;
+    border:1px solid #d8a4ff;
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    background:#9d4edd22;
+    box-shadow:0 0 25px #9d4edd55;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.button:hover{
+    transform:translateY(-5px) scale(1.05);
+    background:#9d4edd;
+    box-shadow:0 0 45px #c77dff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(100px,18vw,200px);
+    color:#e0aaff;
+    text-shadow:
+    0 0 15px white,
+    0 0 35px #c77dff,
+    0 0 80px #7b2cbf;
+    animation:heroGlow 3s infinite alternate;
+}
+
+@keyframes heroGlow{
+    from{
+        transform:scale(1);
+        filter:brightness(.9);
+    }
+
+    to{
+        transform:scale(1.04);
+        filter:brightness(1.2);
+    }
+}
+
+.age{
+    font-size:clamp(60px,10vw,110px);
+    font-weight:700;
+    background:linear-gradient(90deg,#b76cff,#f0d5ff,#b76cff);
+    background-size:200%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:shine 4s linear infinite;
+}
+
+@keyframes shine{
+    to{
+        background-position:200%;
+    }
+}
+
+.hero-date{
+    margin-top:15px;
+    color:#cdb4db;
+    font-size:18px;
+}
+
+/* =========================
+   GLASS BOX
+========================= */
+
+.glass{
+    max-width:900px;
+    padding:50px;
+    border:1px solid #ffffff1a;
+    border-radius:30px;
+    background:#ffffff09;
+    box-shadow:0 0 50px #7b2cbf33;
+    backdrop-filter:blur(12px);
+    line-height:2;
+    color:#e9dff0;
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story{
+    max-width:850px;
+}
+
+.story p{
+    margin-bottom:25px;
+}
+
+.highlight{
+    color:#d8a4ff;
+    font-weight:600;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    max-width:900px;
+    width:100%;
+    margin-top:50px;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(#c77dff,#7b2cbf,transparent);
+}
+
+.timeline-card{
+    width:45%;
+    padding:30px;
+    background:#ffffff09;
+    border:1px solid #ffffff18;
+    border-radius:25px;
+    margin:30px 0;
+    box-shadow:0 0 25px #7b2cbf22;
+    text-align:left;
+}
+
+.timeline-card:nth-child(odd){
+    margin-left:0;
+}
+
+.timeline-card:nth-child(even){
+    margin-left:55%;
+}
+
+.timeline-card h3{
+    color:#d8a4ff;
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.timeline-card p{
+    color:#d7c9df;
+    line-height:1.8;
+}
+
+/* =========================
+   GORAKHPUR MUMBAI
+========================= */
+
+.route{
+    font-size:clamp(22px,5vw,55px);
+    color:#d8a4ff;
+    text-shadow:0 0 25px #a855f7;
+    margin:40px 0;
+}
+
+.route-line{
+    width:80%;
+    max-width:800px;
+    height:2px;
+    background:linear-gradient(90deg,#9d4edd,transparent,#9d4edd);
+    position:relative;
+}
+
+.route-line::before,
+.route-line::after{
+    content:"💜";
+    position:absolute;
+    top:-15px;
+}
+
+.route-line::before{
+    left:-10px;
+}
+
+.route-line::after{
+    right:-10px;
+}
+
+/* =========================
+   HER PHOTOS
+========================= */
+
+.gallery{
+    width:100%;
+    max-width:1100px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+    margin-top:40px;
+}
+
+.photo{
+    height:380px;
+    border-radius:25px;
+    overflow:hidden;
+    border:2px solid #c77dff;
+    background:#180025;
+    box-shadow:0 0 30px #9d4edd55;
+    transform:rotate(-2deg);
+    transition:.5s;
+}
+
+.photo:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.photo:hover{
+    transform:scale(1.06) rotate(0);
+    box-shadow:0 0 50px #c77dff;
+    z-index:5;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.photo:hover img{
+    transform:scale(1.08);
+}
+
+.photo-text{
+    position:absolute;
+}
+
+/* =========================
+   19 CARDS
+========================= */
+
+.cards{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.card{
+    min-height:160px;
+    padding:25px;
+    border-radius:22px;
+    background:linear-gradient(145deg,#ffffff0d,#9d4edd12);
+    border:1px solid #ffffff18;
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #9d4edd55;
+}
+
+.number{
+    font-size:30px;
+    color:#c77dff;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+/* =========================
+   FUNNY SECTION
+========================= */
+
+.fun-box{
+    max-width:800px;
+    display:grid;
+    gap:20px;
+    margin-top:40px;
+}
+
+.fun{
+    padding:25px;
+    border-radius:20px;
+    background:#ffffff08;
+    border:1px solid #ffffff15;
+    text-align:left;
+}
+
+.fun span{
+    color:#d8a4ff;
+}
+
+/* =========================
+   NEET
+========================= */
+
+.neet-card{
+    max-width:850px;
+    padding:50px;
+    border-radius:30px;
+    background:#ffffff09;
+    border:1px solid #c77dff44;
+    box-shadow:0 0 40px #7b2cbf33;
+}
+
+.neet-card h3{
+    font-size:35px;
+    color:#e0aaff;
+    margin-bottom:25px;
+}
+
+.neet-card p{
+    color:#ddd;
+    line-height:2;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+    max-width:850px;
+    padding:55px;
+    background:linear-gradient(145deg,#f4e7ff,#ead4fa);
+    color:#35104d;
+    border-radius:20px;
+    text-align:left;
+    box-shadow:0 0 60px #c77dff77;
+    line-height:2;
+}
+
+.letter p{
+    margin-bottom:20px;
+}
+
+.letter strong{
+    color:#6a1b9a;
+}
+
+.signature{
+    font-family:'Great Vibes',cursive;
+    font-size:45px;
+    text-align:right;
+    color:#6a1b9a;
+}
+
+/* =========================
+   GIFT
+========================= */
+
+.gift{
+    font-size:120px;
+    cursor:pointer;
+    animation:giftFloat 2s infinite alternate;
+    filter:drop-shadow(0 0 25px #c77dff);
+}
+
+@keyframes giftFloat{
+    from{
+        transform:translateY(0) rotate(-3deg);
+    }
+
+    to{
+        transform:translateY(-15px) rotate(3deg);
+    }
+}
+
+.gift-message{
+    display:none;
+    max-width:700px;
+    margin-top:30px;
+    padding:35px;
+    border-radius:25px;
+    background:#ffffff0b;
+    border:1px solid #c77dff55;
+    line-height:2;
+}
+
+/* =========================
+   CAKE
+========================= */
+
+.cake{
+    position:relative;
+    width:280px;
+    height:250px;
+    margin-top:40px;
+}
+
+.cake-base{
+    position:absolute;
+    bottom:0;
+    left:20px;
+    width:240px;
+    height:120px;
+    background:linear-gradient(#d69cff,#7624b5);
+    border-radius:15px 15px 25px 25px;
+    box-shadow:0 0 40px #9d4edd;
+}
+
+.cake-middle{
+    position:absolute;
+    bottom:90px;
+    left:35px;
+    width:210px;
+    height:70px;
+    background:#e4b8ff;
+    border-radius:15px;
+}
+
+.cake-top{
+    position:absolute;
+    bottom:145px;
+    left:35px;
+    width:210px;
+    height:45px;
+    background:#f1d8ff;
+    border-radius:50%;
+}
+
+.candle{
+    position:absolute;
+    bottom:175px;
+    left:132px;
+    width:16px;
+    height:65px;
+    background:#b76cff;
+}
+
+.flame{
+    position:absolute;
+    bottom:235px;
+    left:124px;
+    font-size:35px;
+    animation:flame 1s infinite alternate;
+}
+
+@keyframes flame{
+    from{
+        transform:scale(.8);
+    }
+
+    to{
+        transform:scale(1.2);
+    }
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final h2{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(70px,12vw,140px);
+    color:#e0aaff;
+    text-shadow:0 0 50px #c77dff;
+}
+
+.final-message{
+    max-width:800px;
+    font-size:18px;
+    line-height:2;
+    color:#ddd;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    font-size:20px;
+    z-index:100;
+    animation:confettiFall 5s linear forwards;
+}
+
+@keyframes confettiFall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:40px;
+    text-align:center;
+    color:#887794;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    section{
+        padding:90px 20px;
+    }
+
+    .glass{
+        padding:30px 22px;
+    }
+
+    .timeline::before{
+        left:8px;
+    }
+
+    .timeline-card{
+        width:100%;
+        margin:25px 0 !important;
+        margin-left:0 !important;
+        padding-left:30px;
+    }
+
+    .letter{
+        padding:30px 22px;
+    }
+
+    .photo{
+        height:350px;
+    }
+
+    .route{
+        font-size:22px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- STARS -->
+
+<div class="stars">
+
+    <div class="star" style="top:8%;left:10%;"></div>
+    <div class="star" style="top:15%;left:35%;"></div>
+    <div class="star" style="top:20%;left:80%;"></div>
+    <div class="star" style="top:30%;left:55%;"></div>
+    <div class="star" style="top:40%;left:15%;"></div>
+    <div class="star" style="top:48%;left:90%;"></div>
+    <div class="star" style="top:55%;left:45%;"></div>
+    <div class="star" style="top:65%;left:70%;"></div>
+    <div class="star" style="top:72%;left:20%;"></div>
+    <div class="star" style="top:80%;left:85%;"></div>
+    <div class="star" style="top:88%;left:40%;"></div>
+    <div class="star" style="top:95%;left:60%;"></div>
+
+</div>
+
+
+<!-- =========================
+     1. INTRO
+========================= -->
+
+<section class="hero">
+
+    <div class="small">
+        A little something for someone very special...
+    </div>
+
+    <h1>Praguu</h1>
+
+    <div class="age">
+        19 ✨
+    </div>
+
+    <div class="hero-date">
+        12 • 11 • 2026
+    </div>
+
+    <p class="subtitle">
+        Before you continue...
+        just know that this little website contains
+        a lot of memories, a little bit of madness,
+        and a whole lot of love. 💜
+    </p>
+
+    <a href="#beginning" class="button">
+        ✨ Begin Your Surprise ✨
+    </a>
+
+</section>
+
+
+<!-- =========================
+     2. BIRTHDAY
+========================= -->
+
+<section>
+
+    <div class="small">
+        Today is your day
+    </div>
+
+    <h2 class="title">
+        Happy 19th Birthday
+    </h2>
+
+    <h2 class="title">
+        Praguu 💜
+    </h2>
+
+    <p class="subtitle">
+        19 years of you existing in this world,
+        and somehow I'm lucky enough to have known
+        you for a part of those years.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     3. BEGINNING
+========================= -->
+
+<section id="beginning">
+
+    <div class="small">
+        Let's go back...
+    </div>
+
+    <h2 class="title">
+        Where It All Began
+    </h2>
+
+    <div class="glass story">
+
+        <p>
+            <span class="highlight">Class 9th. 2022.</span>
+        </p>
+
+        <p>
+            That's where our story started.
+        </p>
+
+        <p>
+            Back then, we were just two girls
+            living in the same city, going to school,
+            attending classes and living completely
+            normal teenage lives.
+        </p>
+
+        <p>
+            We obviously had no idea that a random
+            meeting in class 9th would eventually turn
+            into a friendship that would become such
+            an important part of our lives.
+        </p>
+
+        <p>
+            But sometimes the best things in life
+            don't announce themselves.
+        </p>
+
+        <p class="highlight">
+            They just quietly become memories. 💜
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     4. CLASS 9
+========================= -->
+
+<section>
+
+    <div class="small">
+        Chapter One
+    </div>
+
+    <h2 class="title">
+        The Class 9 Era 📚
+    </h2>
+
+    <div class="glass">
+
+        <p>
+            Imagine us back in 2022.
+        </p>
+
+        <br>
+
+        <p>
+            Same city.
+            Same school.
+            Same classroom.
+        </p>
+
+        <br>
+
+        <p>
+            We had absolutely no idea that those
+            ordinary school days would eventually
+            become some of the memories we would
+            look back on the most.
+        </p>
+
+        <br>
+
+        <p>
+            The random conversations,
+            the laughter,
+            the silly moments,
+            the little things that didn't seem
+            important at the time...
+        </p>
+
+        <br>
+
+        <p class="highlight">
+            Those were actually the beginning
+            of our story.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     5. CLASS 10
+========================= -->
+
+<section>
+
+    <div class="small">
+        Chapter Two
+    </div>
+
+    <h2 class="title">
+        Then Came Class 10 🎒
+    </h2>
+
+    <div class="glass">
+
+        <p>
+            Another year together.
+        </p>
+
+        <br>
+
+        <p>
+            More school days.
+            More conversations.
+            More memories.
+            More reasons for this friendship
+            to become what it is today.
+        </p>
+
+        <br>
+
+        <p>
+            We probably didn't realize that
+            this was going to be our last year
+            living the same everyday routine.
+        </p>
+
+        <br>
+
+        <p>
+            Because after 10th,
+            life had something completely different
+            planned for both of us.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     6. DISTANCE
+========================= -->
+
+<section>
+
+    <div class="small">
+        Chapter Three
+    </div>
+
+    <h2 class="title">
+        Then Everything Changed...
+    </h2>
+
+    <p class="subtitle">
+
+        After class 10th,
+        I moved to Mumbai.
+
+        <br><br>
+
+        You stayed in Gorakhpur.
+
+    </p>
+
+    <div class="route">
+
+        GORAKHPUR 💜 MUMBAI
+
+    </div>
+
+    <div class="route-line"></div>
+
+    <div class="glass" style="margin-top:50px;">
+
+        <p>
+            Suddenly the same city wasn't the same anymore.
+        </p>
+
+        <br>
+
+        <p>
+            We weren't just a short distance away.
+            We had different cities,
+            different routines and different lives.
+        </p>
+
+        <br>
+
+        <p>
+            But distance has a funny way of showing
+            you which friendships actually matter.
+        </p>
+
+        <br>
+
+        <p class="highlight">
+            And somehow, ours stayed.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     7. HER PHOTOS
+========================= -->
+
+<section>
+
+    <div class="small">
+        Now let's talk about the birthday girl...
+    </div>
+
+    <h2 class="title">
+        The Birthday Girl 💜
+    </h2>
+
+    <p class="subtitle">
+        Because honestly...
+        19 deserves a whole gallery dedicated to YOU.
+    </p>
+
+    <div class="gallery">
+
+
+        <div class="photo">
+
+            <img
+                src="photos/IMG-20241222-WA0005.jpg"
+                alt="Praguu"
+            >
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="photos/IMG-20250518-WA0001.jpg"
+                alt="Praguu"
+            >
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="photos/IMG-20250619-WA0006.jpg"
+                alt="Praguu"
+            >
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="photos/IMG-20251002-WA0014.jpg"
+                alt="Praguu"
+            >
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="photos/Screenshot_20260514-093920_WhatsApp.png"
+                alt="Praguu"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     8. FUNNY
+========================= -->
+
+<section>
+
+    <div class="small">
+        Bestie mode activated
+    </div>
+
+    <h2 class="title">
+        Things Only We Understand 😂
+    </h2>
+
+    <div class="fun-box">
+
+        <div class="fun">
+            <span>01 —</span>
+            The random conversations that somehow
+            become hour-long conversations.
+        </div>
+
+        <div class="fun">
+            <span>02 —</span>
+            The jokes that would make absolutely
+            no sense to anyone else.
+        </div>
+
+        <div class="fun">
+            <span>03 —</span>
+            The moments where one look is enough
+            to understand everything.
+        </div>
+
+        <div class="fun">
+            <span>04 —</span>
+            The completely unnecessary chaos
+            that somehow becomes a memory.
+        </div>
+
+        <div class="fun">
+            <span>05 —</span>
+            And obviously...
+            all the things that cannot be written
+            on a public birthday website. 😭
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     9. 19 THINGS
+========================= -->
+
+<section>
+
+    <div class="small">
+        Because you're turning 19...
+    </div>
+
+    <h2 class="title">
+        19 Things About You 💜
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="number">01</div>
+            Your smile
+        </div>
+
+        <div class="card">
+            <div class="number">02</div>
+            Your laugh
+        </div>
+
+        <div class="card">
+            <div class="number">03</div>
+            Your crazy energy 😂
+        </div>
+
+        <div class="card">
+            <div class="number">04</div>
+            The way you understand me
+        </div>
+
+        <div class="card">
+            <div class="number">05</div>
+            Your kindness
+        </div>
+
+        <div class="card">
+            <div class="number">06</div>
+            Your honesty
+        </div>
+
+        <div class="card">
+            <div class="number">07</div>
+            Your determination
+        </div>
+
+        <div class="card">
+            <div class="number">08</div>
+            Your sense of humour
+        </div>
+
+        <div class="card">
+            <div class="number">09</div>
+            Your ability to make things better
+        </div>
+
+        <div class="card">
+            <div class="number">10</div>
+            Your dreams
+        </div>
+
+        <div class="card">
+            <div class="number">11</div>
+            Your strength
+        </div>
+
+        <div class="card">
+            <div class="number">12</div>
+            Your beautiful heart
+        </div>
+
+        <div class="card">
+            <div class="number">13</div>
+            Our school memories
+        </div>
+
+        <div class="card">
+            <div class="number">14</div>
+            Our random talks
+        </div>
+
+        <div class="card">
+            <div class="number">15</div>
+            Your caring nature
+        </div>
+
+        <div class="card">
+            <div class="number">16</div>
+            The fact that distance didn't end us
+        </div>
+
+        <div class="card">
+            <div class="number">17</div>
+            Your beautiful madness 😂
+        </div>
+
+        <div class="card">
+            <div class="number">18</div>
+            Everything you've become
+        </div>
+
+        <div class="card">
+            <div class="number">19</div>
+            <strong>
+                Simply being Praguu. 💜
+            </strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     10. NEET
+========================= -->
+
+<section>
+
+    <div class="small">
+        A little message for your future
+    </div>
+
+    <h2 class="title">
+        Future Dr. Praguu 🩺
+    </h2>
+
+    <div class="neet-card">
+
+        <h3>
+            Your Dream Is Worth Chasing.
+        </h3>
+
+        <p>
+            Right now, you're preparing for NEET.
+        </p>
+
+        <br>
+
+        <p>
+            And I know there will be days when
+            studying feels exhausting, when a chapter
+            refuses to make sense, when tests don't go
+            the way you wanted, and when you wonder
+            whether you're doing enough.
+        </p>
+
+        <br>
+
+        <p>
+            But please don't let one bad day make you
+            question your entire journey.
+        </p>
+
+        <br>
+
+        <p>
+            Keep going.
+            Keep learning.
+            Keep trying.
+            Keep believing.
+        </p>
+
+        <br>
+
+        <p>
+            Someday, you'll look back at these days
+            and realize that every difficult chapter
+            was part of getting you where you wanted to go.
+        </p>
+
+        <br>
+
+        <p style="color:#d8a4ff;font-weight:600;">
+            I believe in you, future doctor. 💜
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     11. DISTANCE MESSAGE
+========================= -->
+
+<section>
+
+    <div class="small">
+        From Mumbai to Gorakhpur
+    </div>
+
+    <h2 class="title">
+        Distance Is Just Geography 🌙
+    </h2>
+
+    <div class="glass">
+
+        <p>
+            We may not be able to walk into the same
+            classroom anymore.
+        </p>
+
+        <br>
+
+        <p>
+            We may not live in the same city anymore.
+        </p>
+
+        <br>
+
+        <p>
+            We may have completely different routines.
+        </p>
+
+        <br>
+
+        <p>
+            But there are some people who remain close
+            even when they're far away.
+        </p>
+
+        <br>
+
+        <p class="highlight">
+            And you're one of those people for me.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     12. LONG LETTER
+========================= -->
+
+<section>
+
+    <div class="small">
+        Read this slowly...
+    </div>
+
+    <h2 class="title">
+        A Letter For You 💌
+    </h2>
+
+    <div class="letter">
+
+        <p>
+            Dear Praguu,
+        </p>
+
+        <p>
+            Happy 19th Birthday. 💜
+        </p>
+
+        <p>
+            Sometimes I think about how funny life is.
+            In 2022, we were just two girls in class 9th,
+            living in Gorakhpur and going through our
+            everyday school lives.
+        </p>
+
+        <p>
+            We didn't know what the next few years
+            were going to look like.
+            We didn't know that after class 10th,
+            I'd move to Mumbai while you'd continue
+            your life in Gorakhpur.
+        </p>
+
+        <p>
+            We definitely didn't know how quickly
+            everything would change.
+        </p>
+
+        <p>
+            But if someone had asked me back then
+            whether that girl I met in class 9th
+            would become one of my closest friends,
+            I'm really glad the answer turned out to be yes.
+        </p>
+
+        <p>
+            We've grown up a lot since then.
+            We've changed.
+            We've started thinking about our futures.
+            We've started chasing bigger dreams.
+        </p>
+
+        <p>
+            And now you're preparing for NEET,
+            working towards becoming the person
+            you've dreamed of becoming.
+        </p>
+
+        <p>
+            I genuinely hope you get everything
+            you're working for.
+        </p>
+
+        <p>
+            I hope you have the courage to keep going
+            when things get difficult.
+            I hope you never underestimate yourself.
+            And I hope you remember that your current
+            struggles are only a small chapter
+            in a much bigger story.
+        </p>
+
+        <p>
+            Most importantly, I hope you have a
+            beautiful 19th year.
+        </p>
+
+        <p>
+            I hope there are random happy moments,
+            unexpected laughter, new memories,
+            exciting opportunities and plenty of
+            reasons to smile.
+        </p>
+
+        <p>
+            And someday, years from now,
+            I hope we look back at our old school
+            memories and laugh about how young we were.
+        </p>
+
+        <p>
+            From class 9th in 2022...
+            to class 10th...
+            to Mumbai and Gorakhpur...
+            and now to whatever comes next.
+        </p>
+
+        <p>
+            Thank you for being part of my story.
+        </p>
+
+        <p>
+            Here's to another year of you.
+            Another year of dreams.
+            Another year of becoming the person
+            you're meant to be.
+        </p>
+
+        <p>
+            And here's to many more years of friendship,
+            conversations, laughter and memories.
+        </p>
+
+        <p>
+            Happy 19th birthday, Praguu.
+        </p>
+
+        <p>
+            I hope you know how special you are.
+        </p>
+
+        <div class="signature">
+            Your Bestie 💜
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     13. SECRET GIFT
+========================= -->
+
+<section>
+
+    <div class="small">
+        Wait... there's something else.
+    </div>
+
+    <h2 class="title">
+        One Last Surprise 🎁
+    </h2>
+
+    <p class="subtitle">
+        You didn't think the birthday website
+        was going to end here, did you? 😌
+    </p>
+
+    <div class="gift" onclick="openGift()">
+        🎁
+    </div>
+
+    <p>
+        Tap the gift.
+    </p>
+
+    <div class="gift-message" id="giftMessage">
+
+        <h3 style="color:#d8a4ff;font-size:30px;">
+            Surprise! 💜
+        </h3>
+
+        <br>
+
+        <p>
+            If I could wrap up every beautiful memory
+            we've made since 2022 and put it inside
+            this box, I would.
+        </p>
+
+        <br>
+
+        <p>
+            But since that's impossible...
+            I made you this little corner of the internet instead. 🥹
+        </p>
+
+        <br>
+
+        <p style="color:#d8a4ff;">
+            Happy Birthday, Praguu. ✨
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     14. CAKE
+========================= -->
+
+<section>
+
+    <div class="small">
+        Okay, NOW it's time...
+    </div>
+
+    <h2 class="title">
+        Make A Wish 🎂
+    </h2>
+
+    <p class="subtitle">
+        Close your eyes for a second,
+        think of something you really want,
+        and make your 19th birthday wish.
+    </p>
+
+    <div class="cake">
+
+        <div class="flame" id="flame">
+            🔥
+        </div>
+
+        <div class="candle"></div>
+
+        <div class="cake-top"></div>
+
+        <div class="cake-middle"></div>
+
+        <div class="cake-base"></div>
+
+    </div>
+
+    <button class="button" onclick="makeWish()">
+        🕯️ Make My Wish
+    </button>
+
+    <p id="wish" style="margin-top:30px;color:#d8a4ff;"></p>
+
+</section>
+
+
+<!-- =========================
+     15. FINAL
+========================= -->
+
+<section class="final">
+
+    <div class="small">
+        And finally...
+    </div>
+
+    <h2>
+        Happy Birthday
+    </h2>
+
+    <h2>
+        Praguu 💜
+    </h2>
+
+    <div class="final-message">
+
+        <p>
+            Four years ago, in class 9th,
+            we had no idea where life would take us.
+        </p>
+
+        <br>
+
+        <p>
+            We started in the same city.
+            We grew up through school together.
+            Then life sent us in different directions.
+        </p>
+
+        <br>
+
+        <p>
+            You stayed in Gorakhpur.
+            I moved to Mumbai.
+        </p>
+
+        <br>
+
+        <p>
+            But somewhere between 2022 and 2026,
+            a simple school friendship became
+            something I genuinely treasure.
+        </p>
+
+        <br>
+
+        <p>
+            So here's to your 19th chapter.
+        </p>
+
+        <br>
+
+        <p>
+            Here's to your dreams.
+            Here's to NEET.
+            Here's to your future.
+            Here's to every beautiful thing
+            that's still waiting for you.
+        </p>
+
+        <br>
+
+        <p>
+            And here's to us...
+            wherever life takes us next.
+        </p>
+
+        <br>
+
+        <p style="font-size:25px;color:#d8a4ff;">
+            May 19 be your most beautiful chapter yet. ✨
+        </p>
+
+        <br>
+
+        <p style="font-size:28px;color:#e0aaff;">
+            <strong>
+                Happy 19th Birthday, Praguu. 💜
+            </strong>
+        </p>
+
+        <br>
+
+        <p>
+            From your bestie,
+            with a ridiculous amount of love. 🫶🏻
+        </p>
+
+    </div>
+
+    <button class="button" onclick="celebrate()">
+        🎉 CELEBRATE 🎉
+    </button>
+
+</section>
+
+
+<footer>
+
+    Made specially for Praguu 💜
+    <br>
+    12 November 2026
+
+</footer>
+
+
+<script>
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+setInterval(function(){
+
+    const heart=document.createElement("div");
+
+    heart.className="heart";
+
+    heart.innerHTML=
+        ["💜","💖","✨","♡","✦"][Math.floor(Math.random()*5)];
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.fontSize=
+        (12+Math.random()*22)+"px";
+
+    heart.style.animationDuration=
+        (5+Math.random()*4)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },9000);
+
+},900);
+
+
+/* =========================
+   GIFT
+========================= */
+
+function openGift(){
+
+    const message=
+        document.getElementById("giftMessage");
+
+    message.style.display="block";
+
+    createConfetti(50);
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+function makeWish(){
+
+    document.getElementById("flame").style.display="none";
+
+    document.getElementById("wish").innerHTML=
+        "✨ Your wish has been sent to the universe. 💜✨";
+
+    createConfetti(100);
+
+}
+
+
+/* =========================
+   FINAL CELEBRATION
+========================= */
+
+function celebrate(){
+
+    createConfetti(180);
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(amount){
+
+    const symbols=
+        ["💜","✨","💖","⭐","🌸","🎉"];
+
+    for(let i=0;i<amount;i++){
+
+        const piece=
+            document.createElement("div");
+
+        piece.className="confetti";
+
+        piece.innerHTML=
+            symbols[
+                Math.floor(
+                    Math.random()*symbols.length
+                )
+            ];
+
+        piece.style.left=
+            Math.random()*100+"vw";
+
+        piece.style.animationDuration=
+            (2+Math.random()*4)+"s";
+
+        piece.style.fontSize=
+            (12+Math.random()*18)+"px";
+
+        document.body.appendChild(piece);
+
+        setTimeout(function(){
+            piece.remove();
+        },6000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
